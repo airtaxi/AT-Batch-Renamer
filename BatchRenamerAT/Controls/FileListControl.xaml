@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<controls:BaseControl
+    x:Class="BatchRenamerAT.Controls.FileListControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:BatchRenamerAT.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="using:BatchRenamerAT.ViewModels"
+    Loaded="OnControlLoaded"
+    Unloaded="OnControlUnloaded"
+    mc:Ignorable="d">
+
+    <Grid RowSpacing="4">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" ColumnSpacing="8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock
+                Grid.Column="0"
+                VerticalAlignment="Center"
+                Style="{StaticResource SubtitleTextBlockStyle}"
+                Text="{x:Bind ViewModel.ItemCountText, Mode=OneWay}" />
+
+            <CommandBar
+                Grid.Column="1"
+                HorizontalAlignment="Right"
+                Background="Transparent"
+                DefaultLabelPosition="Right">
+                <AppBarButton x:Uid="AddFilesButton" Command="{x:Bind ViewModel.AddFilesCommand}">
+                    <AppBarButton.Icon>
+                        <FontIcon Glyph="&#xE710;" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+                <AppBarButton x:Uid="AddFolderButton" Command="{x:Bind ViewModel.AddFolderCommand}">
+                    <AppBarButton.Icon>
+                        <FontIcon Glyph="&#xE8F4;" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+                <AppBarButton x:Uid="SortButton" IsEnabled="{x:Bind ViewModel.HasItems, Mode=OneWay}">
+                    <AppBarButton.Icon>
+                        <FontIcon Glyph="&#xE8CB;" />
+                    </AppBarButton.Icon>
+                    <AppBarButton.Flyout>
+                        <MenuFlyout Placement="Bottom">
+                            <MenuFlyoutItem x:Uid="SortByNameMenuItem" Command="{x:Bind ViewModel.SortByNameCommand}" />
+                            <MenuFlyoutItem x:Uid="SortByDateModifiedMenuItem" Command="{x:Bind ViewModel.SortByDateModifiedCommand}" />
+                            <MenuFlyoutItem x:Uid="SortByDateCreatedMenuItem" Command="{x:Bind ViewModel.SortByDateCreatedCommand}" />
+                            <MenuFlyoutItem x:Uid="SortBySizeMenuItem" Command="{x:Bind ViewModel.SortBySizeCommand}" />
+                            <MenuFlyoutItem x:Uid="SortByExtensionMenuItem" Command="{x:Bind ViewModel.SortByExtensionCommand}" />
+                            <MenuFlyoutSeparator />
+                            <ToggleMenuFlyoutItem x:Uid="SortDescendingMenuItem" IsChecked="{x:Bind ViewModel.IsSortDescending, Mode=TwoWay}" />
+                        </MenuFlyout>
+                    </AppBarButton.Flyout>
+                </AppBarButton>
+                <AppBarButton x:Uid="RemoveSelectedFilesButton" Command="{x:Bind ViewModel.RemoveSelectedCommand}">
+                    <AppBarButton.Icon>
+                        <FontIcon Glyph="&#xE74D;" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+                <AppBarButton x:Uid="RemoveAllFilesButton" Command="{x:Bind ViewModel.RemoveAllCommand}">
+                    <AppBarButton.Icon>
+                        <FontIcon Glyph="&#xE894;" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+            </CommandBar>
+        </Grid>
+
+        <Grid
+            Grid.Row="1"
+            Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+            BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+            BorderThickness="1"
+            CornerRadius="{StaticResource OverlayCornerRadius}">
+            <ListView
+                x:Name="FileListView"
+                x:Uid="FileListView"
+                AllowDrop="True"
+                Background="Transparent"
+                CanDragItems="True"
+                CanReorderItems="True"
+                ItemsSource="{x:Bind ViewModel.Items}"
+                KeyboardAcceleratorPlacementMode="Hidden"
+                SelectionChanged="OnFileListViewSelectionChanged"
+                SelectionMode="Extended">
+                <ListView.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="Delete" Invoked="OnDeleteKeyboardAcceleratorInvoked" />
+                </ListView.KeyboardAccelerators>
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="viewModels:FileItemViewModel">
+                        <Grid Padding="0,6" ColumnSpacing="12">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="20" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <FontIcon
+                                Grid.Column="0"
+                                FontSize="16"
+                                Glyph="&#xE8A5;"
+                                Visibility="{x:Bind IsFile}" />
+                            <FontIcon
+                                Grid.Column="0"
+                                FontSize="16"
+                                Glyph="&#xE8B7;"
+                                Visibility="{x:Bind IsDirectory}" />
+
+                            <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                                <TextBlock Text="{x:Bind Name, Mode=OneWay}" TextTrimming="CharacterEllipsis" />
+                                <TextBlock
+                                    Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                                    Style="{StaticResource CaptionTextBlockStyle}"
+                                    Text="{x:Bind DirectoryPath, Mode=OneWay}"
+                                    TextTrimming="CharacterEllipsis" />
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <TextBlock
+                x:Uid="FileListEmptyTextBlock"
+                Margin="24,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                IsHitTestVisible="False"
+                TextAlignment="Center"
+                TextWrapping="Wrap"
+                Visibility="{x:Bind ViewModel.HasItems, Mode=OneWay, Converter={StaticResource InverseBoolToVisibilityConverter}}" />
+        </Grid>
+    </Grid>
+</controls:BaseControl>

@@ -1,0 +1,14 @@
+<Solution>
+  <Configurations>
+    <Platform Name="ARM64" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="BatchRenamerAT/BatchRenamerAT.csproj">
+    <Platform Solution="*|ARM64" Project="ARM64" />
+    <Platform Solution="*|x64" Project="x64" />
+    <Platform Solution="*|x86" Project="x86" />
+    <Deploy />
+  </Project>
+  <Project Path="BatchRenamerATContextMenu/BatchRenamerATContextMenu.vcxproj" Id="c3b6e2d4-5f1a-4e8b-9d2c-7a41b0e6f953" />
+</Solution>

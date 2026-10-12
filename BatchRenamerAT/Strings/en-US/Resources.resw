@@ -1,0 +1,609 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActionConvertCaseItem.Content" xml:space="preserve">
+    <value>Change case</value>
+  </data>
+  <data name="ActionInsertItem.Content" xml:space="preserve">
+    <value>Insert</value>
+  </data>
+  <data name="ActionReplaceItem.Content" xml:space="preserve">
+    <value>Replace</value>
+  </data>
+  <data name="AddFilesButton.Label" xml:space="preserve">
+    <value>Add files</value>
+  </data>
+  <data name="AddFolderButton.Label" xml:space="preserve">
+    <value>Add folder</value>
+  </data>
+  <data name="AddTriggerButton.Label" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AppDescription" xml:space="preserve">
+    <value>Rename many files at once with ordered rules.</value>
+  </data>
+  <data name="AppDisplayName" xml:space="preserve">
+    <value>AT Batch Renamer</value>
+  </data>
+  <data name="AppTitleBar.Title" xml:space="preserve">
+    <value>AT Batch Renamer</value>
+  </data>
+  <data name="CaseLowercaseItem.Content" xml:space="preserve">
+    <value>lowercase</value>
+  </data>
+  <data name="CaseSentenceCaseItem.Content" xml:space="preserve">
+    <value>Sentence case</value>
+  </data>
+  <data name="CaseTitleCaseItem.Content" xml:space="preserve">
+    <value>Capitalize Each Word</value>
+  </data>
+  <data name="CaseUppercaseItem.Content" xml:space="preserve">
+    <value>UPPERCASE</value>
+  </data>
+  <data name="CharacterIndexNumberBox.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Character position</value>
+  </data>
+  <data name="CharacterIndexNumberBox.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Number of characters before the inserted text</value>
+  </data>
+  <data name="CloseBlockedDefaultReason" xml:space="preserve">
+    <value>A task is in progress. Wait for it to finish before closing.</value>
+  </data>
+  <data name="CloseBlockedRenamingReason" xml:space="preserve">
+    <value>Items are being renamed. Wait for it to finish before closing.</value>
+  </data>
+  <data name="CloseBlockedTitle" xml:space="preserve">
+    <value>Task in progress</value>
+  </data>
+  <data name="ConditionCheckBox.Content" xml:space="preserve">
+    <value>Only apply to matching names</value>
+  </data>
+  <data name="ConditionContainsItem.Content" xml:space="preserve">
+    <value>Contains</value>
+  </data>
+  <data name="ConditionEndsWithItem.Content" xml:space="preserve">
+    <value>Ends with</value>
+  </data>
+  <data name="ConditionEqualsItem.Content" xml:space="preserve">
+    <value>Is exactly</value>
+  </data>
+  <data name="ConditionRegularExpressionItem.Content" xml:space="preserve">
+    <value>Matches regular expression</value>
+  </data>
+  <data name="ConditionStartsWithItem.Content" xml:space="preserve">
+    <value>Starts with</value>
+  </data>
+  <data name="ConditionTextBox.PlaceholderText" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="ConditionTextBox.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Condition text</value>
+  </data>
+  <data name="ConditionWhenMatchesItem.Content" xml:space="preserve">
+    <value>When it matches</value>
+  </data>
+  <data name="ConditionWhenNotMatchesItem.Content" xml:space="preserve">
+    <value>When it doesn't match</value>
+  </data>
+  <data name="ContentSequenceNumberItem.Content" xml:space="preserve">
+    <value>Sequence number</value>
+  </data>
+  <data name="ContentTextBox.PlaceholderText" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="ContentTextBox.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="ContentTextItem.Content" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="DeleteAllTriggersButton.Label" xml:space="preserve">
+    <value>Delete all triggers</value>
+  </data>
+  <data name="DeleteTriggerButton.Label" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DescriptionCaseLowercase" xml:space="preserve">
+    <value>lowercase</value>
+  </data>
+  <data name="DescriptionCaseSentenceCase" xml:space="preserve">
+    <value>sentence case</value>
+  </data>
+  <data name="DescriptionCaseTitleCase" xml:space="preserve">
+    <value>title case</value>
+  </data>
+  <data name="DescriptionCaseUppercase" xml:space="preserve">
+    <value>uppercase</value>
+  </data>
+  <data name="DescriptionConditionContainsFormat" xml:space="preserve">
+    <value>{0} contains {1}</value>
+  </data>
+  <data name="DescriptionConditionEndsWithFormat" xml:space="preserve">
+    <value>{0} ends with {1}</value>
+  </data>
+  <data name="DescriptionConditionEqualsFormat" xml:space="preserve">
+    <value>{0} is {1}</value>
+  </data>
+  <data name="DescriptionConditionRegularExpressionFormat" xml:space="preserve">
+    <value>{0} matches the regex {1}</value>
+  </data>
+  <data name="DescriptionConditionStartsWithFormat" xml:space="preserve">
+    <value>{0} starts with {1}</value>
+  </data>
+  <data name="DescriptionConditionWhenMatchesFormat" xml:space="preserve">
+    <value>only if {0}</value>
+  </data>
+  <data name="DescriptionConditionWhenNotMatchesFormat" xml:space="preserve">
+    <value>except if {0}</value>
+  </data>
+  <data name="DescriptionConvertCaseFormat" xml:space="preserve">
+    <value>Convert {0} to {1}</value>
+  </data>
+  <data name="DescriptionEmptyText" xml:space="preserve">
+    <value>nothing</value>
+  </data>
+  <data name="DescriptionInsertAfterCharacterFormat" xml:space="preserve">
+    <value>Insert {1} after character {2} of {0}</value>
+  </data>
+  <data name="DescriptionInsertBeginningFormat" xml:space="preserve">
+    <value>Insert {1} at the beginning of {0}</value>
+  </data>
+  <data name="DescriptionInsertEndFormat" xml:space="preserve">
+    <value>Insert {1} at the end of {0}</value>
+  </data>
+  <data name="DescriptionOptionFirstMatch" xml:space="preserve">
+    <value>first match only</value>
+  </data>
+  <data name="DescriptionOptionLastMatch" xml:space="preserve">
+    <value>last match only</value>
+  </data>
+  <data name="DescriptionOptionMatchCase" xml:space="preserve">
+    <value>match case</value>
+  </data>
+  <data name="DescriptionOptionRegularExpression" xml:space="preserve">
+    <value>regex</value>
+  </data>
+  <data name="DescriptionReplaceTextFormat" xml:space="preserve">
+    <value>Replace {1} with {2} in {0}</value>
+  </data>
+  <data name="DescriptionReplaceWholeFormat" xml:space="preserve">
+    <value>Replace the whole {0} with {1}</value>
+  </data>
+  <data name="DescriptionScopeExtension" xml:space="preserve">
+    <value>extension</value>
+  </data>
+  <data name="DescriptionScopeFileName" xml:space="preserve">
+    <value>file name</value>
+  </data>
+  <data name="DescriptionScopeFullName" xml:space="preserve">
+    <value>full name</value>
+  </data>
+  <data name="DescriptionSequenceNumberFormat" xml:space="preserve">
+    <value>sequence number ({0} digits, from {1}, step {2})</value>
+  </data>
+  <data name="DialogOkButtonText" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="DigitsNumberBox.Header" xml:space="preserve">
+    <value>Digits</value>
+  </data>
+  <data name="EditTriggerButton.Label" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="FileCountFormat" xml:space="preserve">
+    <value>Files ({0})</value>
+  </data>
+  <data name="FileListEmptyTextBlock.Text" xml:space="preserve">
+    <value>Drag files or folders here, or use Add files.</value>
+  </data>
+  <data name="FileListView.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Files</value>
+  </data>
+  <data name="FolderHandlingAddFilesItem.Content" xml:space="preserve">
+    <value>Add files in the folders</value>
+  </data>
+  <data name="FolderHandlingAddFilesRadioButton.Content" xml:space="preserve">
+    <value>Add the files in the folders</value>
+  </data>
+  <data name="FolderHandlingAddFilesRecursivelyItem.Content" xml:space="preserve">
+    <value>Add files including subfolders</value>
+  </data>
+  <data name="FolderHandlingAddFilesRecursivelyRadioButton.Content" xml:space="preserve">
+    <value>Add all files, including subfolders</value>
+  </data>
+  <data name="FolderHandlingAskItem.Content" xml:space="preserve">
+    <value>Ask every time</value>
+  </data>
+  <data name="FolderHandlingDescriptionFormat" xml:space="preserve">
+    <value>{0} folder(s) added. How should they be handled?</value>
+  </data>
+  <data name="FolderHandlingDialog.CloseButtonText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="FolderHandlingDialog.PrimaryButtonText" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="FolderHandlingDialog.Title" xml:space="preserve">
+    <value>Add folders</value>
+  </data>
+  <data name="FolderHandlingRememberCheckBox.Content" xml:space="preserve">
+    <value>Don't ask again (you can change this in Settings)</value>
+  </data>
+  <data name="FolderHandlingRenameFoldersItem.Content" xml:space="preserve">
+    <value>Rename the folders</value>
+  </data>
+  <data name="FolderHandlingRenameFoldersRadioButton.Content" xml:space="preserve">
+    <value>Rename the folders themselves</value>
+  </data>
+  <data name="FolderHandlingSettingsCard.Description" xml:space="preserve">
+    <value>Applies to dropped folders and folders opened from File Explorer.</value>
+  </data>
+  <data name="FolderHandlingSettingsCard.Header" xml:space="preserve">
+    <value>When adding folders</value>
+  </data>
+  <data name="LanguageSettingsCard.Header" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="LanguageSystemItem.Content" xml:space="preserve">
+    <value>Use system setting</value>
+  </data>
+  <data name="LoadingFolderFilesMessage" xml:space="preserve">
+    <value>Reading folders…</value>
+  </data>
+  <data name="LoadTriggersButton.Label" xml:space="preserve">
+    <value>Load triggers</value>
+  </data>
+  <data name="MainWindow.Title" xml:space="preserve">
+    <value>AT Batch Renamer</value>
+  </data>
+  <data name="MatchCaseCheckBox.Content" xml:space="preserve">
+    <value>Match case</value>
+  </data>
+  <data name="MoveTriggerDownButton.Label" xml:space="preserve">
+    <value>Move down</value>
+  </data>
+  <data name="MoveTriggerUpButton.Label" xml:space="preserve">
+    <value>Move up</value>
+  </data>
+  <data name="OccurrenceAllItem.Content" xml:space="preserve">
+    <value>All matches</value>
+  </data>
+  <data name="OccurrenceFirstItem.Content" xml:space="preserve">
+    <value>First match only</value>
+  </data>
+  <data name="OccurrenceLastItem.Content" xml:space="preserve">
+    <value>Last match only</value>
+  </data>
+  <data name="PositionAfterCharacterItem.Content" xml:space="preserve">
+    <value>After character</value>
+  </data>
+  <data name="PositionBeginningItem.Content" xml:space="preserve">
+    <value>At the beginning</value>
+  </data>
+  <data name="PositionEndItem.Content" xml:space="preserve">
+    <value>At the end</value>
+  </data>
+  <data name="PreviewEmptyTextBlock.Text" xml:space="preserve">
+    <value>New names appear here as you add files and triggers.</value>
+  </data>
+  <data name="PreviewListView.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="PreviewNewNameHeaderTextBlock.Text" xml:space="preserve">
+    <value>New name</value>
+  </data>
+  <data name="PreviewOriginalNameHeaderTextBlock.Text" xml:space="preserve">
+    <value>Current name</value>
+  </data>
+  <data name="PreviewResultSummaryFormat" xml:space="preserve">
+    <value>{0} succeeded · {1} failed</value>
+  </data>
+  <data name="PreviewStatusAlreadyExists" xml:space="preserve">
+    <value>Already exists</value>
+  </data>
+  <data name="PreviewStatusChanged" xml:space="preserve">
+    <value>Changed</value>
+  </data>
+  <data name="PreviewStatusDuplicate" xml:space="preserve">
+    <value>Duplicate name</value>
+  </data>
+  <data name="PreviewStatusEmptyName" xml:space="preserve">
+    <value>Empty name</value>
+  </data>
+  <data name="PreviewStatusFailed" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="PreviewStatusHeaderTextBlock.Text" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="PreviewStatusInvalidCharacters" xml:space="preserve">
+    <value>Invalid characters</value>
+  </data>
+  <data name="PreviewStatusMissing" xml:space="preserve">
+    <value>Not found</value>
+  </data>
+  <data name="PreviewStatusRenamed" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="PreviewStatusReservedName" xml:space="preserve">
+    <value>Reserved name</value>
+  </data>
+  <data name="PreviewStatusTriggerError" xml:space="preserve">
+    <value>Trigger error</value>
+  </data>
+  <data name="PreviewStatusUnchanged" xml:space="preserve">
+    <value>Unchanged</value>
+  </data>
+  <data name="PreviewSummaryFormat" xml:space="preserve">
+    <value>{0} changed · {1} unchanged · {2} conflicts</value>
+  </data>
+  <data name="PreviewTitleTextBlock.Text" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="RemoveAllFilesButton.Label" xml:space="preserve">
+    <value>Remove all</value>
+  </data>
+  <data name="RemoveSelectedFilesButton.Label" xml:space="preserve">
+    <value>Remove selected</value>
+  </data>
+  <data name="RenameButtonCountFormat" xml:space="preserve">
+    <value>Rename ({0})</value>
+  </data>
+  <data name="RenameButtonText" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="RenameResultTitle" xml:space="preserve">
+    <value>Rename complete</value>
+  </data>
+  <data name="RenamingMessage" xml:space="preserve">
+    <value>Renaming…</value>
+  </data>
+  <data name="ReplaceTargetSpecificTextItem.Content" xml:space="preserve">
+    <value>Specific text</value>
+  </data>
+  <data name="ReplaceTargetWholeNameItem.Content" xml:space="preserve">
+    <value>Whole text</value>
+  </data>
+  <data name="RestartNoticeInfoBar.Message" xml:space="preserve">
+    <value>Restart the app to apply the new language.</value>
+  </data>
+  <data name="ResultPartiallyFailedFormat" xml:space="preserve">
+    <value>{0} renamed, {1} failed. Check the preview for details.</value>
+  </data>
+  <data name="ResultSucceededFormat" xml:space="preserve">
+    <value>{0} item(s) renamed.</value>
+  </data>
+  <data name="SaveTriggersButton.Label" xml:space="preserve">
+    <value>Save triggers</value>
+  </data>
+  <data name="ScopeExtensionItem.Content" xml:space="preserve">
+    <value>Extension</value>
+  </data>
+  <data name="ScopeFileNameItem.Content" xml:space="preserve">
+    <value>File name</value>
+  </data>
+  <data name="ScopeFullNameItem.Content" xml:space="preserve">
+    <value>File name and extension</value>
+  </data>
+  <data name="SettingsButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="SettingsButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="SettingsTitleBar.Title" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="SettingsWindow.Title" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="SortButton.Label" xml:space="preserve">
+    <value>Sort</value>
+  </data>
+  <data name="SortByDateCreatedMenuItem.Text" xml:space="preserve">
+    <value>Date created</value>
+  </data>
+  <data name="SortByDateModifiedMenuItem.Text" xml:space="preserve">
+    <value>Date modified</value>
+  </data>
+  <data name="SortByExtensionMenuItem.Text" xml:space="preserve">
+    <value>Extension</value>
+  </data>
+  <data name="SortByNameMenuItem.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="SortBySizeMenuItem.Text" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="SortDescendingMenuItem.Text" xml:space="preserve">
+    <value>Descending</value>
+  </data>
+  <data name="StartNumberNumberBox.Header" xml:space="preserve">
+    <value>Start at</value>
+  </data>
+  <data name="StepNumberBox.Header" xml:space="preserve">
+    <value>Step</value>
+  </data>
+  <data name="SubstitutionHintTextBlock.Text" xml:space="preserve">
+    <value>Use $1, $2, and so on to insert captured groups.</value>
+  </data>
+  <data name="ThemeDarkItem.Content" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="ThemeLightItem.Content" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="ThemeSettingsCard.Header" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="ThemeSystemItem.Content" xml:space="preserve">
+    <value>Use system setting</value>
+  </data>
+  <data name="TriggerCountFormat" xml:space="preserve">
+    <value>Triggers ({0})</value>
+  </data>
+  <data name="TriggerEditorActionLabel.Text" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="TriggerEditorAddButtonText" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="TriggerEditorAddTitle" xml:space="preserve">
+    <value>Add trigger</value>
+  </data>
+  <data name="TriggerEditorCaseLabel.Text" xml:space="preserve">
+    <value>Change to</value>
+  </data>
+  <data name="TriggerEditorConditionModeLabel.Text" xml:space="preserve">
+    <value>Apply when</value>
+  </data>
+  <data name="TriggerEditorConditionOperatorLabel.Text" xml:space="preserve">
+    <value>Condition</value>
+  </data>
+  <data name="TriggerEditorConditionScopeLabel.Text" xml:space="preserve">
+    <value>Check</value>
+  </data>
+  <data name="TriggerEditorContentLabel.Text" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="TriggerEditorDialog.CloseButtonText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="TriggerEditorEditTitle" xml:space="preserve">
+    <value>Edit trigger</value>
+  </data>
+  <data name="TriggerEditorFindTextLabel.Text" xml:space="preserve">
+    <value>Find</value>
+  </data>
+  <data name="TriggerEditorOccurrenceLabel.Text" xml:space="preserve">
+    <value>Matches</value>
+  </data>
+  <data name="TriggerEditorPositionLabel.Text" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="TriggerEditorSampleLabel.Text" xml:space="preserve">
+    <value>Example</value>
+  </data>
+  <data name="TriggerEditorSaveButtonText" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="TriggerEditorScopeLabel.Text" xml:space="preserve">
+    <value>Apply to</value>
+  </data>
+  <data name="TriggerEditorTargetLabel.Text" xml:space="preserve">
+    <value>Replace</value>
+  </data>
+  <data name="TriggerEnabledCheckBox.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Use this trigger</value>
+  </data>
+  <data name="TriggerEnabledCheckBox.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>Use this trigger</value>
+  </data>
+  <data name="TriggerFileSuggestedName" xml:space="preserve">
+    <value>Triggers</value>
+  </data>
+  <data name="TriggerFileTypeLabel" xml:space="preserve">
+    <value>AT Batch Renamer triggers</value>
+  </data>
+  <data name="TriggerListEmptyTextBlock.Text" xml:space="preserve">
+    <value>Add a trigger to choose how names change. Triggers run from top to bottom.</value>
+  </data>
+  <data name="TriggerListView.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Triggers</value>
+  </data>
+  <data name="TriggerLoadFailedFormat" xml:space="preserve">
+    <value>Couldn't load the triggers.
+{0}</value>
+  </data>
+  <data name="TriggerSaveFailedFormat" xml:space="preserve">
+    <value>Couldn't save the triggers.
+{0}</value>
+  </data>
+  <data name="UndoButton.Content" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="UndoingMessage" xml:space="preserve">
+    <value>Undoing…</value>
+  </data>
+  <data name="UndoResultTitle" xml:space="preserve">
+    <value>Undo complete</value>
+  </data>
+  <data name="UseRegularExpressionCheckBox.Content" xml:space="preserve">
+    <value>Use regular expression</value>
+  </data>
+  <data name="ValidationConditionTextRequired" xml:space="preserve">
+    <value>Enter the text for the condition.</value>
+  </data>
+  <data name="ValidationFindTextRequired" xml:space="preserve">
+    <value>Enter the text to find.</value>
+  </data>
+  <data name="ValidationInsertTextRequired" xml:space="preserve">
+    <value>Enter the text to insert.</value>
+  </data>
+  <data name="ValidationInvalidRegularExpressionFormat" xml:space="preserve">
+    <value>The regular expression is invalid: {0}</value>
+  </data>
+  <data name="VersionSettingsCard.Header" xml:space="preserve">
+    <value>Version</value>
+  </data>
+</root>

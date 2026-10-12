@@ -1,0 +1,609 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActionConvertCaseItem.Content" xml:space="preserve">
+    <value>大文字/小文字の変換</value>
+  </data>
+  <data name="ActionInsertItem.Content" xml:space="preserve">
+    <value>追加</value>
+  </data>
+  <data name="ActionReplaceItem.Content" xml:space="preserve">
+    <value>置換</value>
+  </data>
+  <data name="AddFilesButton.Label" xml:space="preserve">
+    <value>ファイルを追加</value>
+  </data>
+  <data name="AddFolderButton.Label" xml:space="preserve">
+    <value>フォルダーを追加</value>
+  </data>
+  <data name="AddTriggerButton.Label" xml:space="preserve">
+    <value>追加</value>
+  </data>
+  <data name="AppDescription" xml:space="preserve">
+    <value>順番に適用されるルールで複数のファイル名を一括で変更します。</value>
+  </data>
+  <data name="AppDisplayName" xml:space="preserve">
+    <value>AT Batch Renamer</value>
+  </data>
+  <data name="AppTitleBar.Title" xml:space="preserve">
+    <value>AT Batch Renamer</value>
+  </data>
+  <data name="CaseLowercaseItem.Content" xml:space="preserve">
+    <value>すべて小文字</value>
+  </data>
+  <data name="CaseSentenceCaseItem.Content" xml:space="preserve">
+    <value>先頭のみ大文字</value>
+  </data>
+  <data name="CaseTitleCaseItem.Content" xml:space="preserve">
+    <value>単語の先頭を大文字</value>
+  </data>
+  <data name="CaseUppercaseItem.Content" xml:space="preserve">
+    <value>すべて大文字</value>
+  </data>
+  <data name="CharacterIndexNumberBox.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>文字位置</value>
+  </data>
+  <data name="CharacterIndexNumberBox.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>追加する内容の前に残す文字数</value>
+  </data>
+  <data name="CloseBlockedDefaultReason" xml:space="preserve">
+    <value>処理中です。完了してから閉じてください。</value>
+  </data>
+  <data name="CloseBlockedRenamingReason" xml:space="preserve">
+    <value>名前を変更しています。完了してから閉じてください。</value>
+  </data>
+  <data name="CloseBlockedTitle" xml:space="preserve">
+    <value>処理中</value>
+  </data>
+  <data name="ConditionCheckBox.Content" xml:space="preserve">
+    <value>特定のファイルにのみ適用</value>
+  </data>
+  <data name="ConditionContainsItem.Content" xml:space="preserve">
+    <value>含む</value>
+  </data>
+  <data name="ConditionEndsWithItem.Content" xml:space="preserve">
+    <value>で終わる</value>
+  </data>
+  <data name="ConditionEqualsItem.Content" xml:space="preserve">
+    <value>完全一致</value>
+  </data>
+  <data name="ConditionRegularExpressionItem.Content" xml:space="preserve">
+    <value>正規表現に一致</value>
+  </data>
+  <data name="ConditionStartsWithItem.Content" xml:space="preserve">
+    <value>で始まる</value>
+  </data>
+  <data name="ConditionTextBox.PlaceholderText" xml:space="preserve">
+    <value>文字列</value>
+  </data>
+  <data name="ConditionTextBox.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>条件の文字列</value>
+  </data>
+  <data name="ConditionWhenMatchesItem.Content" xml:space="preserve">
+    <value>条件に一致するとき</value>
+  </data>
+  <data name="ConditionWhenNotMatchesItem.Content" xml:space="preserve">
+    <value>条件に一致しないとき</value>
+  </data>
+  <data name="ContentSequenceNumberItem.Content" xml:space="preserve">
+    <value>連番</value>
+  </data>
+  <data name="ContentTextBox.PlaceholderText" xml:space="preserve">
+    <value>文字列</value>
+  </data>
+  <data name="ContentTextBox.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>文字列</value>
+  </data>
+  <data name="ContentTextItem.Content" xml:space="preserve">
+    <value>文字列</value>
+  </data>
+  <data name="DeleteAllTriggersButton.Label" xml:space="preserve">
+    <value>すべてのトリガーを削除</value>
+  </data>
+  <data name="DeleteTriggerButton.Label" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="DescriptionCaseLowercase" xml:space="preserve">
+    <value>すべて小文字</value>
+  </data>
+  <data name="DescriptionCaseSentenceCase" xml:space="preserve">
+    <value>先頭のみ大文字</value>
+  </data>
+  <data name="DescriptionCaseTitleCase" xml:space="preserve">
+    <value>単語の先頭を大文字</value>
+  </data>
+  <data name="DescriptionCaseUppercase" xml:space="preserve">
+    <value>すべて大文字</value>
+  </data>
+  <data name="DescriptionConditionContainsFormat" xml:space="preserve">
+    <value>{0}に{1}を含む</value>
+  </data>
+  <data name="DescriptionConditionEndsWithFormat" xml:space="preserve">
+    <value>{0}が{1}で終わる</value>
+  </data>
+  <data name="DescriptionConditionEqualsFormat" xml:space="preserve">
+    <value>{0}が{1}と一致</value>
+  </data>
+  <data name="DescriptionConditionRegularExpressionFormat" xml:space="preserve">
+    <value>{0}が正規表現{1}に一致</value>
+  </data>
+  <data name="DescriptionConditionStartsWithFormat" xml:space="preserve">
+    <value>{0}が{1}で始まる</value>
+  </data>
+  <data name="DescriptionConditionWhenMatchesFormat" xml:space="preserve">
+    <value>条件: {0}</value>
+  </data>
+  <data name="DescriptionConditionWhenNotMatchesFormat" xml:space="preserve">
+    <value>除外: {0}</value>
+  </data>
+  <data name="DescriptionConvertCaseFormat" xml:space="preserve">
+    <value>{0}を{1}に変換</value>
+  </data>
+  <data name="DescriptionEmptyText" xml:space="preserve">
+    <value>空の文字列</value>
+  </data>
+  <data name="DescriptionInsertAfterCharacterFormat" xml:space="preserve">
+    <value>{0}の{2}文字目の後に{1}を追加</value>
+  </data>
+  <data name="DescriptionInsertBeginningFormat" xml:space="preserve">
+    <value>{0}の先頭に{1}を追加</value>
+  </data>
+  <data name="DescriptionInsertEndFormat" xml:space="preserve">
+    <value>{0}の末尾に{1}を追加</value>
+  </data>
+  <data name="DescriptionOptionFirstMatch" xml:space="preserve">
+    <value>最初のみ</value>
+  </data>
+  <data name="DescriptionOptionLastMatch" xml:space="preserve">
+    <value>最後のみ</value>
+  </data>
+  <data name="DescriptionOptionMatchCase" xml:space="preserve">
+    <value>大文字と小文字を区別</value>
+  </data>
+  <data name="DescriptionOptionRegularExpression" xml:space="preserve">
+    <value>正規表現</value>
+  </data>
+  <data name="DescriptionReplaceTextFormat" xml:space="preserve">
+    <value>{0}の{1}を{2}に置換</value>
+  </data>
+  <data name="DescriptionReplaceWholeFormat" xml:space="preserve">
+    <value>{0}全体を{1}に置換</value>
+  </data>
+  <data name="DescriptionScopeExtension" xml:space="preserve">
+    <value>拡張子</value>
+  </data>
+  <data name="DescriptionScopeFileName" xml:space="preserve">
+    <value>ファイル名</value>
+  </data>
+  <data name="DescriptionScopeFullName" xml:space="preserve">
+    <value>名前全体</value>
+  </data>
+  <data name="DescriptionSequenceNumberFormat" xml:space="preserve">
+    <value>連番 ({0} 桁、{1} から {2} ずつ)</value>
+  </data>
+  <data name="DialogOkButtonText" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="DigitsNumberBox.Header" xml:space="preserve">
+    <value>桁数</value>
+  </data>
+  <data name="EditTriggerButton.Label" xml:space="preserve">
+    <value>編集</value>
+  </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>エラー</value>
+  </data>
+  <data name="FileCountFormat" xml:space="preserve">
+    <value>ファイル ({0})</value>
+  </data>
+  <data name="FileListEmptyTextBlock.Text" xml:space="preserve">
+    <value>ここにファイルやフォルダーをドラッグするか、[ファイルを追加] を使用してください。</value>
+  </data>
+  <data name="FileListView.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>ファイル</value>
+  </data>
+  <data name="FolderHandlingAddFilesItem.Content" xml:space="preserve">
+    <value>フォルダー内のファイルを追加</value>
+  </data>
+  <data name="FolderHandlingAddFilesRadioButton.Content" xml:space="preserve">
+    <value>フォルダー内のファイルを追加</value>
+  </data>
+  <data name="FolderHandlingAddFilesRecursivelyItem.Content" xml:space="preserve">
+    <value>サブフォルダーを含めてファイルを追加</value>
+  </data>
+  <data name="FolderHandlingAddFilesRecursivelyRadioButton.Content" xml:space="preserve">
+    <value>サブフォルダーを含むすべてのファイルを追加</value>
+  </data>
+  <data name="FolderHandlingAskItem.Content" xml:space="preserve">
+    <value>毎回確認する</value>
+  </data>
+  <data name="FolderHandlingDescriptionFormat" xml:space="preserve">
+    <value>{0} 個のフォルダーが追加されました。どのように処理しますか?</value>
+  </data>
+  <data name="FolderHandlingDialog.CloseButtonText" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="FolderHandlingDialog.PrimaryButtonText" xml:space="preserve">
+    <value>追加</value>
+  </data>
+  <data name="FolderHandlingDialog.Title" xml:space="preserve">
+    <value>フォルダーの追加</value>
+  </data>
+  <data name="FolderHandlingRememberCheckBox.Content" xml:space="preserve">
+    <value>今後確認しない (設定で変更できます)</value>
+  </data>
+  <data name="FolderHandlingRenameFoldersItem.Content" xml:space="preserve">
+    <value>フォルダー名を変更</value>
+  </data>
+  <data name="FolderHandlingRenameFoldersRadioButton.Content" xml:space="preserve">
+    <value>フォルダー自体の名前を変更</value>
+  </data>
+  <data name="FolderHandlingSettingsCard.Description" xml:space="preserve">
+    <value>ドラッグしたフォルダーとエクスプローラーから開いたフォルダーに適用されます。</value>
+  </data>
+  <data name="FolderHandlingSettingsCard.Header" xml:space="preserve">
+    <value>フォルダーを追加するとき</value>
+  </data>
+  <data name="LanguageSettingsCard.Header" xml:space="preserve">
+    <value>言語</value>
+  </data>
+  <data name="LanguageSystemItem.Content" xml:space="preserve">
+    <value>システム設定を使用</value>
+  </data>
+  <data name="LoadingFolderFilesMessage" xml:space="preserve">
+    <value>フォルダーを読み込んでいます…</value>
+  </data>
+  <data name="LoadTriggersButton.Label" xml:space="preserve">
+    <value>トリガーを読み込む</value>
+  </data>
+  <data name="MainWindow.Title" xml:space="preserve">
+    <value>AT Batch Renamer</value>
+  </data>
+  <data name="MatchCaseCheckBox.Content" xml:space="preserve">
+    <value>大文字と小文字を区別</value>
+  </data>
+  <data name="MoveTriggerDownButton.Label" xml:space="preserve">
+    <value>下へ</value>
+  </data>
+  <data name="MoveTriggerUpButton.Label" xml:space="preserve">
+    <value>上へ</value>
+  </data>
+  <data name="OccurrenceAllItem.Content" xml:space="preserve">
+    <value>すべて</value>
+  </data>
+  <data name="OccurrenceFirstItem.Content" xml:space="preserve">
+    <value>最初のみ</value>
+  </data>
+  <data name="OccurrenceLastItem.Content" xml:space="preserve">
+    <value>最後のみ</value>
+  </data>
+  <data name="PositionAfterCharacterItem.Content" xml:space="preserve">
+    <value>指定した文字数の後</value>
+  </data>
+  <data name="PositionBeginningItem.Content" xml:space="preserve">
+    <value>先頭</value>
+  </data>
+  <data name="PositionEndItem.Content" xml:space="preserve">
+    <value>末尾</value>
+  </data>
+  <data name="PreviewEmptyTextBlock.Text" xml:space="preserve">
+    <value>ファイルとトリガーを追加すると、新しい名前がここに表示されます。</value>
+  </data>
+  <data name="PreviewListView.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>プレビュー</value>
+  </data>
+  <data name="PreviewNewNameHeaderTextBlock.Text" xml:space="preserve">
+    <value>新しい名前</value>
+  </data>
+  <data name="PreviewOriginalNameHeaderTextBlock.Text" xml:space="preserve">
+    <value>現在の名前</value>
+  </data>
+  <data name="PreviewResultSummaryFormat" xml:space="preserve">
+    <value>成功 {0} · 失敗 {1}</value>
+  </data>
+  <data name="PreviewStatusAlreadyExists" xml:space="preserve">
+    <value>既に存在</value>
+  </data>
+  <data name="PreviewStatusChanged" xml:space="preserve">
+    <value>変更</value>
+  </data>
+  <data name="PreviewStatusDuplicate" xml:space="preserve">
+    <value>名前の重複</value>
+  </data>
+  <data name="PreviewStatusEmptyName" xml:space="preserve">
+    <value>空の名前</value>
+  </data>
+  <data name="PreviewStatusFailed" xml:space="preserve">
+    <value>失敗</value>
+  </data>
+  <data name="PreviewStatusHeaderTextBlock.Text" xml:space="preserve">
+    <value>状態</value>
+  </data>
+  <data name="PreviewStatusInvalidCharacters" xml:space="preserve">
+    <value>使用できない文字</value>
+  </data>
+  <data name="PreviewStatusMissing" xml:space="preserve">
+    <value>見つかりません</value>
+  </data>
+  <data name="PreviewStatusRenamed" xml:space="preserve">
+    <value>完了</value>
+  </data>
+  <data name="PreviewStatusReservedName" xml:space="preserve">
+    <value>予約された名前</value>
+  </data>
+  <data name="PreviewStatusTriggerError" xml:space="preserve">
+    <value>トリガーのエラー</value>
+  </data>
+  <data name="PreviewStatusUnchanged" xml:space="preserve">
+    <value>変更なし</value>
+  </data>
+  <data name="PreviewSummaryFormat" xml:space="preserve">
+    <value>変更 {0} · 変更なし {1} · 競合 {2}</value>
+  </data>
+  <data name="PreviewTitleTextBlock.Text" xml:space="preserve">
+    <value>プレビュー</value>
+  </data>
+  <data name="RemoveAllFilesButton.Label" xml:space="preserve">
+    <value>すべて削除</value>
+  </data>
+  <data name="RemoveSelectedFilesButton.Label" xml:space="preserve">
+    <value>選択項目を削除</value>
+  </data>
+  <data name="RenameButtonCountFormat" xml:space="preserve">
+    <value>名前を変更 ({0})</value>
+  </data>
+  <data name="RenameButtonText" xml:space="preserve">
+    <value>名前を変更</value>
+  </data>
+  <data name="RenameResultTitle" xml:space="preserve">
+    <value>名前の変更が完了しました</value>
+  </data>
+  <data name="RenamingMessage" xml:space="preserve">
+    <value>名前を変更しています…</value>
+  </data>
+  <data name="ReplaceTargetSpecificTextItem.Content" xml:space="preserve">
+    <value>特定の文字列</value>
+  </data>
+  <data name="ReplaceTargetWholeNameItem.Content" xml:space="preserve">
+    <value>全体</value>
+  </data>
+  <data name="RestartNoticeInfoBar.Message" xml:space="preserve">
+    <value>新しい言語はアプリの再起動後に適用されます。</value>
+  </data>
+  <data name="ResultPartiallyFailedFormat" xml:space="preserve">
+    <value>{0} 個成功、{1} 個失敗しました。詳細はプレビューを確認してください。</value>
+  </data>
+  <data name="ResultSucceededFormat" xml:space="preserve">
+    <value>{0} 個の項目の名前を変更しました。</value>
+  </data>
+  <data name="SaveTriggersButton.Label" xml:space="preserve">
+    <value>トリガーを保存</value>
+  </data>
+  <data name="ScopeExtensionItem.Content" xml:space="preserve">
+    <value>拡張子</value>
+  </data>
+  <data name="ScopeFileNameItem.Content" xml:space="preserve">
+    <value>ファイル名</value>
+  </data>
+  <data name="ScopeFullNameItem.Content" xml:space="preserve">
+    <value>ファイル名と拡張子</value>
+  </data>
+  <data name="SettingsButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="SettingsButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="SettingsTitleBar.Title" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="SettingsWindow.Title" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="SortButton.Label" xml:space="preserve">
+    <value>並べ替え</value>
+  </data>
+  <data name="SortByDateCreatedMenuItem.Text" xml:space="preserve">
+    <value>作成日時</value>
+  </data>
+  <data name="SortByDateModifiedMenuItem.Text" xml:space="preserve">
+    <value>更新日時</value>
+  </data>
+  <data name="SortByExtensionMenuItem.Text" xml:space="preserve">
+    <value>拡張子</value>
+  </data>
+  <data name="SortByNameMenuItem.Text" xml:space="preserve">
+    <value>名前</value>
+  </data>
+  <data name="SortBySizeMenuItem.Text" xml:space="preserve">
+    <value>サイズ</value>
+  </data>
+  <data name="SortDescendingMenuItem.Text" xml:space="preserve">
+    <value>降順</value>
+  </data>
+  <data name="StartNumberNumberBox.Header" xml:space="preserve">
+    <value>開始番号</value>
+  </data>
+  <data name="StepNumberBox.Header" xml:space="preserve">
+    <value>増分</value>
+  </data>
+  <data name="SubstitutionHintTextBlock.Text" xml:space="preserve">
+    <value>$1、$2 などでキャプチャしたグループを挿入できます。</value>
+  </data>
+  <data name="ThemeDarkItem.Content" xml:space="preserve">
+    <value>ダーク</value>
+  </data>
+  <data name="ThemeLightItem.Content" xml:space="preserve">
+    <value>ライト</value>
+  </data>
+  <data name="ThemeSettingsCard.Header" xml:space="preserve">
+    <value>テーマ</value>
+  </data>
+  <data name="ThemeSystemItem.Content" xml:space="preserve">
+    <value>システム設定を使用</value>
+  </data>
+  <data name="TriggerCountFormat" xml:space="preserve">
+    <value>トリガー ({0})</value>
+  </data>
+  <data name="TriggerEditorActionLabel.Text" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="TriggerEditorAddButtonText" xml:space="preserve">
+    <value>追加</value>
+  </data>
+  <data name="TriggerEditorAddTitle" xml:space="preserve">
+    <value>トリガーの追加</value>
+  </data>
+  <data name="TriggerEditorCaseLabel.Text" xml:space="preserve">
+    <value>変換方法</value>
+  </data>
+  <data name="TriggerEditorConditionModeLabel.Text" xml:space="preserve">
+    <value>適用するとき</value>
+  </data>
+  <data name="TriggerEditorConditionOperatorLabel.Text" xml:space="preserve">
+    <value>条件</value>
+  </data>
+  <data name="TriggerEditorConditionScopeLabel.Text" xml:space="preserve">
+    <value>確認する部分</value>
+  </data>
+  <data name="TriggerEditorContentLabel.Text" xml:space="preserve">
+    <value>内容</value>
+  </data>
+  <data name="TriggerEditorDialog.CloseButtonText" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="TriggerEditorEditTitle" xml:space="preserve">
+    <value>トリガーの編集</value>
+  </data>
+  <data name="TriggerEditorFindTextLabel.Text" xml:space="preserve">
+    <value>検索する文字列</value>
+  </data>
+  <data name="TriggerEditorOccurrenceLabel.Text" xml:space="preserve">
+    <value>置換する一致</value>
+  </data>
+  <data name="TriggerEditorPositionLabel.Text" xml:space="preserve">
+    <value>位置</value>
+  </data>
+  <data name="TriggerEditorSampleLabel.Text" xml:space="preserve">
+    <value>例</value>
+  </data>
+  <data name="TriggerEditorSaveButtonText" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="TriggerEditorScopeLabel.Text" xml:space="preserve">
+    <value>適用範囲</value>
+  </data>
+  <data name="TriggerEditorTargetLabel.Text" xml:space="preserve">
+    <value>置換対象</value>
+  </data>
+  <data name="TriggerEnabledCheckBox.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>このトリガーを使用</value>
+  </data>
+  <data name="TriggerEnabledCheckBox.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>このトリガーを使用</value>
+  </data>
+  <data name="TriggerFileSuggestedName" xml:space="preserve">
+    <value>トリガー</value>
+  </data>
+  <data name="TriggerFileTypeLabel" xml:space="preserve">
+    <value>AT Batch Renamer トリガー</value>
+  </data>
+  <data name="TriggerListEmptyTextBlock.Text" xml:space="preserve">
+    <value>トリガーを追加して名前の変更方法を決めます。トリガーは上から順に適用されます。</value>
+  </data>
+  <data name="TriggerListView.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>トリガー</value>
+  </data>
+  <data name="TriggerLoadFailedFormat" xml:space="preserve">
+    <value>トリガーを読み込めませんでした。
+{0}</value>
+  </data>
+  <data name="TriggerSaveFailedFormat" xml:space="preserve">
+    <value>トリガーを保存できませんでした。
+{0}</value>
+  </data>
+  <data name="UndoButton.Content" xml:space="preserve">
+    <value>元に戻す</value>
+  </data>
+  <data name="UndoingMessage" xml:space="preserve">
+    <value>元に戻しています…</value>
+  </data>
+  <data name="UndoResultTitle" xml:space="preserve">
+    <value>元に戻しました</value>
+  </data>
+  <data name="UseRegularExpressionCheckBox.Content" xml:space="preserve">
+    <value>正規表現を使用</value>
+  </data>
+  <data name="ValidationConditionTextRequired" xml:space="preserve">
+    <value>条件の文字列を入力してください。</value>
+  </data>
+  <data name="ValidationFindTextRequired" xml:space="preserve">
+    <value>検索する文字列を入力してください。</value>
+  </data>
+  <data name="ValidationInsertTextRequired" xml:space="preserve">
+    <value>追加する文字列を入力してください。</value>
+  </data>
+  <data name="ValidationInvalidRegularExpressionFormat" xml:space="preserve">
+    <value>正規表現が正しくありません: {0}</value>
+  </data>
+  <data name="VersionSettingsCard.Header" xml:space="preserve">
+    <value>バージョン</value>
+  </data>
+</root>

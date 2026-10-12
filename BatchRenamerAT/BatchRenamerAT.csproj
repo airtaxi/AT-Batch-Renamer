@@ -1,0 +1,90 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net10.0-windows10.0.26100.0</TargetFramework>
+		<TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+		<RootNamespace>BatchRenamerAT</RootNamespace>
+		<ApplicationManifest>app.manifest</ApplicationManifest>
+		<Platforms>x86;x64;ARM64</Platforms>
+		<RuntimeIdentifiers>win-x86;win-x64;win-arm64</RuntimeIdentifiers>
+		<PublishProfile>win-$(Platform).pubxml</PublishProfile>
+		<UseWinUI>true</UseWinUI>
+		<WinUISDKReferences>false</WinUISDKReferences>
+		<EnableMsixTooling>true</EnableMsixTooling>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<PublishAot>true</PublishAot>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<ApplicationIcon>Assets\Icon.ico</ApplicationIcon>
+		<DefaultLanguage>en-US</DefaultLanguage>
+		<GenerateAppInstallerFile>False</GenerateAppInstallerFile>
+		<AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
+		<AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+		<GenerateTestArtifacts>False</GenerateTestArtifacts>
+		<AppxBundle>Always</AppxBundle>
+		<AppxBundleAutoResourcePackageQualifiers>Scale</AppxBundleAutoResourcePackageQualifiers>
+		<AppxBundlePlatforms>x86|x64|arm64</AppxBundlePlatforms>
+		<HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
+	</PropertyGroup>
+
+
+	<ItemGroup>
+		<Manifest Include="$(ApplicationManifest)" />
+	</ItemGroup>
+
+	<!--
+    Defining the "Msix" ProjectCapability here allows the Single-project MSIX Packaging
+    Tools extension to be activated for this project even if the Windows App SDK Nuget
+    package has not yet been restored.
+  -->
+	<ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
+		<ProjectCapability Include="Msix" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+		<PackageReference Include="CommunityToolkit.WinUI.Converters" Version="8.2.251219" />
+		<PackageReference Include="DevWinUI" Version="10.7.0" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.12" />
+		<PackageReference Include="Microsoft.Windows.CsWin32" Version="0.3.360">
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.28000.2705" />
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="2.5.1" />
+		<PackageReference Include="WinUIEx" Version="2.9.3" />
+	</ItemGroup>
+
+	<!-- Build dependency: the Explorer context menu DLL is built before the app package -->
+	<ItemGroup>
+		<ProjectReference Include="..\BatchRenamerATContextMenu\BatchRenamerATContextMenu.vcxproj">
+			<ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+			<Private>false</Private>
+		</ProjectReference>
+	</ItemGroup>
+
+	<!-- Explorer context menu DLL placed at the package root (matches the manifest com:Class Path) -->
+	<ItemGroup Condition="'$(Platform)' == 'ARM64'">
+		<Content Include="..\BatchRenamerATContextMenu\bin\$(Configuration)\ARM64\BatchRenamerATContextMenu.dll" Link="BatchRenamerATContextMenu.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+	<ItemGroup Condition="'$(Platform)' == 'x86'">
+		<Content Include="..\BatchRenamerATContextMenu\bin\$(Configuration)\Win32\BatchRenamerATContextMenu.dll" Link="BatchRenamerATContextMenu.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+	<ItemGroup Condition="'$(Platform)' == 'x64'">
+		<Content Include="..\BatchRenamerATContextMenu\bin\$(Configuration)\x64\BatchRenamerATContextMenu.dll" Link="BatchRenamerATContextMenu.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<!--
+    Defining the "HasPackageAndPublishMenuAddedByProject" property here allows the Solution
+    Explorer "Package and Publish" context menu entry to be enabled for this project even if
+    the Windows App SDK Nuget package has not yet been restored.
+  -->
+	<PropertyGroup Condition="'$(DisableHasPackageAndPublishMenuAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
+		<HasPackageAndPublishMenu>true</HasPackageAndPublishMenu>
+	</PropertyGroup>
+</Project>

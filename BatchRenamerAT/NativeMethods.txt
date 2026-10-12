@@ -1,0 +1,3 @@
+EnableWindow
+SetForegroundWindow
+StrCmpLogicalW

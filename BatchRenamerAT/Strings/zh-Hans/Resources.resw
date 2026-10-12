@@ -1,0 +1,609 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActionConvertCaseItem.Content" xml:space="preserve">
+    <value>大小写转换</value>
+  </data>
+  <data name="ActionInsertItem.Content" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="ActionReplaceItem.Content" xml:space="preserve">
+    <value>替换</value>
+  </data>
+  <data name="AddFilesButton.Label" xml:space="preserve">
+    <value>添加文件</value>
+  </data>
+  <data name="AddFolderButton.Label" xml:space="preserve">
+    <value>添加文件夹</value>
+  </data>
+  <data name="AddTriggerButton.Label" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="AppDescription" xml:space="preserve">
+    <value>使用按顺序应用的规则一次重命名多个文件。</value>
+  </data>
+  <data name="AppDisplayName" xml:space="preserve">
+    <value>AT Batch Renamer</value>
+  </data>
+  <data name="AppTitleBar.Title" xml:space="preserve">
+    <value>AT Batch Renamer</value>
+  </data>
+  <data name="CaseLowercaseItem.Content" xml:space="preserve">
+    <value>全部小写</value>
+  </data>
+  <data name="CaseSentenceCaseItem.Content" xml:space="preserve">
+    <value>仅首字母大写</value>
+  </data>
+  <data name="CaseTitleCaseItem.Content" xml:space="preserve">
+    <value>每个单词首字母大写</value>
+  </data>
+  <data name="CaseUppercaseItem.Content" xml:space="preserve">
+    <value>全部大写</value>
+  </data>
+  <data name="CharacterIndexNumberBox.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>字符位置</value>
+  </data>
+  <data name="CharacterIndexNumberBox.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>插入内容之前保留的字符数</value>
+  </data>
+  <data name="CloseBlockedDefaultReason" xml:space="preserve">
+    <value>任务正在进行中。请在完成后关闭。</value>
+  </data>
+  <data name="CloseBlockedRenamingReason" xml:space="preserve">
+    <value>正在重命名。请在完成后关闭。</value>
+  </data>
+  <data name="CloseBlockedTitle" xml:space="preserve">
+    <value>正在处理</value>
+  </data>
+  <data name="ConditionCheckBox.Content" xml:space="preserve">
+    <value>仅应用于匹配的名称</value>
+  </data>
+  <data name="ConditionContainsItem.Content" xml:space="preserve">
+    <value>包含</value>
+  </data>
+  <data name="ConditionEndsWithItem.Content" xml:space="preserve">
+    <value>结尾为</value>
+  </data>
+  <data name="ConditionEqualsItem.Content" xml:space="preserve">
+    <value>完全等于</value>
+  </data>
+  <data name="ConditionRegularExpressionItem.Content" xml:space="preserve">
+    <value>匹配正则表达式</value>
+  </data>
+  <data name="ConditionStartsWithItem.Content" xml:space="preserve">
+    <value>开头为</value>
+  </data>
+  <data name="ConditionTextBox.PlaceholderText" xml:space="preserve">
+    <value>文本</value>
+  </data>
+  <data name="ConditionTextBox.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>条件文本</value>
+  </data>
+  <data name="ConditionWhenMatchesItem.Content" xml:space="preserve">
+    <value>符合条件时</value>
+  </data>
+  <data name="ConditionWhenNotMatchesItem.Content" xml:space="preserve">
+    <value>不符合条件时</value>
+  </data>
+  <data name="ContentSequenceNumberItem.Content" xml:space="preserve">
+    <value>序号</value>
+  </data>
+  <data name="ContentTextBox.PlaceholderText" xml:space="preserve">
+    <value>文本</value>
+  </data>
+  <data name="ContentTextBox.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>文本</value>
+  </data>
+  <data name="ContentTextItem.Content" xml:space="preserve">
+    <value>文本</value>
+  </data>
+  <data name="DeleteAllTriggersButton.Label" xml:space="preserve">
+    <value>删除所有触发器</value>
+  </data>
+  <data name="DeleteTriggerButton.Label" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="DescriptionCaseLowercase" xml:space="preserve">
+    <value>全部小写</value>
+  </data>
+  <data name="DescriptionCaseSentenceCase" xml:space="preserve">
+    <value>仅首字母大写</value>
+  </data>
+  <data name="DescriptionCaseTitleCase" xml:space="preserve">
+    <value>每个单词首字母大写</value>
+  </data>
+  <data name="DescriptionCaseUppercase" xml:space="preserve">
+    <value>全部大写</value>
+  </data>
+  <data name="DescriptionConditionContainsFormat" xml:space="preserve">
+    <value>{0}包含{1}</value>
+  </data>
+  <data name="DescriptionConditionEndsWithFormat" xml:space="preserve">
+    <value>{0}以{1}结尾</value>
+  </data>
+  <data name="DescriptionConditionEqualsFormat" xml:space="preserve">
+    <value>{0}等于{1}</value>
+  </data>
+  <data name="DescriptionConditionRegularExpressionFormat" xml:space="preserve">
+    <value>{0}匹配正则表达式{1}</value>
+  </data>
+  <data name="DescriptionConditionStartsWithFormat" xml:space="preserve">
+    <value>{0}以{1}开头</value>
+  </data>
+  <data name="DescriptionConditionWhenMatchesFormat" xml:space="preserve">
+    <value>条件：{0}</value>
+  </data>
+  <data name="DescriptionConditionWhenNotMatchesFormat" xml:space="preserve">
+    <value>排除：{0}</value>
+  </data>
+  <data name="DescriptionConvertCaseFormat" xml:space="preserve">
+    <value>将{0}转换为{1}</value>
+  </data>
+  <data name="DescriptionEmptyText" xml:space="preserve">
+    <value>空文本</value>
+  </data>
+  <data name="DescriptionInsertAfterCharacterFormat" xml:space="preserve">
+    <value>在{0}的第 {2} 个字符后添加{1}</value>
+  </data>
+  <data name="DescriptionInsertBeginningFormat" xml:space="preserve">
+    <value>在{0}开头添加{1}</value>
+  </data>
+  <data name="DescriptionInsertEndFormat" xml:space="preserve">
+    <value>在{0}末尾添加{1}</value>
+  </data>
+  <data name="DescriptionOptionFirstMatch" xml:space="preserve">
+    <value>仅第一个</value>
+  </data>
+  <data name="DescriptionOptionLastMatch" xml:space="preserve">
+    <value>仅最后一个</value>
+  </data>
+  <data name="DescriptionOptionMatchCase" xml:space="preserve">
+    <value>区分大小写</value>
+  </data>
+  <data name="DescriptionOptionRegularExpression" xml:space="preserve">
+    <value>正则表达式</value>
+  </data>
+  <data name="DescriptionReplaceTextFormat" xml:space="preserve">
+    <value>将{0}中的{1}替换为{2}</value>
+  </data>
+  <data name="DescriptionReplaceWholeFormat" xml:space="preserve">
+    <value>将整个{0}替换为{1}</value>
+  </data>
+  <data name="DescriptionScopeExtension" xml:space="preserve">
+    <value>扩展名</value>
+  </data>
+  <data name="DescriptionScopeFileName" xml:space="preserve">
+    <value>文件名</value>
+  </data>
+  <data name="DescriptionScopeFullName" xml:space="preserve">
+    <value>完整名称</value>
+  </data>
+  <data name="DescriptionSequenceNumberFormat" xml:space="preserve">
+    <value>序号（{0} 位，从 {1} 开始，每次加 {2}）</value>
+  </data>
+  <data name="DialogOkButtonText" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="DigitsNumberBox.Header" xml:space="preserve">
+    <value>位数</value>
+  </data>
+  <data name="EditTriggerButton.Label" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="FileCountFormat" xml:space="preserve">
+    <value>文件 ({0})</value>
+  </data>
+  <data name="FileListEmptyTextBlock.Text" xml:space="preserve">
+    <value>将文件或文件夹拖到此处，或使用“添加文件”。</value>
+  </data>
+  <data name="FileListView.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>文件</value>
+  </data>
+  <data name="FolderHandlingAddFilesItem.Content" xml:space="preserve">
+    <value>添加文件夹中的文件</value>
+  </data>
+  <data name="FolderHandlingAddFilesRadioButton.Content" xml:space="preserve">
+    <value>添加文件夹中的文件</value>
+  </data>
+  <data name="FolderHandlingAddFilesRecursivelyItem.Content" xml:space="preserve">
+    <value>添加文件（包括子文件夹）</value>
+  </data>
+  <data name="FolderHandlingAddFilesRecursivelyRadioButton.Content" xml:space="preserve">
+    <value>添加所有文件（包括子文件夹）</value>
+  </data>
+  <data name="FolderHandlingAskItem.Content" xml:space="preserve">
+    <value>每次询问</value>
+  </data>
+  <data name="FolderHandlingDescriptionFormat" xml:space="preserve">
+    <value>已添加 {0} 个文件夹。要如何处理？</value>
+  </data>
+  <data name="FolderHandlingDialog.CloseButtonText" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="FolderHandlingDialog.PrimaryButtonText" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="FolderHandlingDialog.Title" xml:space="preserve">
+    <value>添加文件夹</value>
+  </data>
+  <data name="FolderHandlingRememberCheckBox.Content" xml:space="preserve">
+    <value>不再询问（可在设置中更改）</value>
+  </data>
+  <data name="FolderHandlingRenameFoldersItem.Content" xml:space="preserve">
+    <value>重命名文件夹</value>
+  </data>
+  <data name="FolderHandlingRenameFoldersRadioButton.Content" xml:space="preserve">
+    <value>重命名文件夹本身</value>
+  </data>
+  <data name="FolderHandlingSettingsCard.Description" xml:space="preserve">
+    <value>适用于拖放的文件夹和从文件资源管理器打开的文件夹。</value>
+  </data>
+  <data name="FolderHandlingSettingsCard.Header" xml:space="preserve">
+    <value>添加文件夹时</value>
+  </data>
+  <data name="LanguageSettingsCard.Header" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="LanguageSystemItem.Content" xml:space="preserve">
+    <value>使用系统设置</value>
+  </data>
+  <data name="LoadingFolderFilesMessage" xml:space="preserve">
+    <value>正在读取文件夹…</value>
+  </data>
+  <data name="LoadTriggersButton.Label" xml:space="preserve">
+    <value>加载触发器</value>
+  </data>
+  <data name="MainWindow.Title" xml:space="preserve">
+    <value>AT Batch Renamer</value>
+  </data>
+  <data name="MatchCaseCheckBox.Content" xml:space="preserve">
+    <value>区分大小写</value>
+  </data>
+  <data name="MoveTriggerDownButton.Label" xml:space="preserve">
+    <value>下移</value>
+  </data>
+  <data name="MoveTriggerUpButton.Label" xml:space="preserve">
+    <value>上移</value>
+  </data>
+  <data name="OccurrenceAllItem.Content" xml:space="preserve">
+    <value>全部</value>
+  </data>
+  <data name="OccurrenceFirstItem.Content" xml:space="preserve">
+    <value>仅第一个</value>
+  </data>
+  <data name="OccurrenceLastItem.Content" xml:space="preserve">
+    <value>仅最后一个</value>
+  </data>
+  <data name="PositionAfterCharacterItem.Content" xml:space="preserve">
+    <value>第 N 个字符后</value>
+  </data>
+  <data name="PositionBeginningItem.Content" xml:space="preserve">
+    <value>开头</value>
+  </data>
+  <data name="PositionEndItem.Content" xml:space="preserve">
+    <value>末尾</value>
+  </data>
+  <data name="PreviewEmptyTextBlock.Text" xml:space="preserve">
+    <value>添加文件和触发器后，新名称将显示在此处。</value>
+  </data>
+  <data name="PreviewListView.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>预览</value>
+  </data>
+  <data name="PreviewNewNameHeaderTextBlock.Text" xml:space="preserve">
+    <value>新名称</value>
+  </data>
+  <data name="PreviewOriginalNameHeaderTextBlock.Text" xml:space="preserve">
+    <value>当前名称</value>
+  </data>
+  <data name="PreviewResultSummaryFormat" xml:space="preserve">
+    <value>成功 {0} · 失败 {1}</value>
+  </data>
+  <data name="PreviewStatusAlreadyExists" xml:space="preserve">
+    <value>已存在</value>
+  </data>
+  <data name="PreviewStatusChanged" xml:space="preserve">
+    <value>更改</value>
+  </data>
+  <data name="PreviewStatusDuplicate" xml:space="preserve">
+    <value>名称重复</value>
+  </data>
+  <data name="PreviewStatusEmptyName" xml:space="preserve">
+    <value>名称为空</value>
+  </data>
+  <data name="PreviewStatusFailed" xml:space="preserve">
+    <value>失败</value>
+  </data>
+  <data name="PreviewStatusHeaderTextBlock.Text" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="PreviewStatusInvalidCharacters" xml:space="preserve">
+    <value>无效字符</value>
+  </data>
+  <data name="PreviewStatusMissing" xml:space="preserve">
+    <value>找不到</value>
+  </data>
+  <data name="PreviewStatusRenamed" xml:space="preserve">
+    <value>完成</value>
+  </data>
+  <data name="PreviewStatusReservedName" xml:space="preserve">
+    <value>保留名称</value>
+  </data>
+  <data name="PreviewStatusTriggerError" xml:space="preserve">
+    <value>触发器错误</value>
+  </data>
+  <data name="PreviewStatusUnchanged" xml:space="preserve">
+    <value>未更改</value>
+  </data>
+  <data name="PreviewSummaryFormat" xml:space="preserve">
+    <value>更改 {0} · 未更改 {1} · 冲突 {2}</value>
+  </data>
+  <data name="PreviewTitleTextBlock.Text" xml:space="preserve">
+    <value>预览</value>
+  </data>
+  <data name="RemoveAllFilesButton.Label" xml:space="preserve">
+    <value>全部移除</value>
+  </data>
+  <data name="RemoveSelectedFilesButton.Label" xml:space="preserve">
+    <value>移除所选项</value>
+  </data>
+  <data name="RenameButtonCountFormat" xml:space="preserve">
+    <value>重命名 ({0})</value>
+  </data>
+  <data name="RenameButtonText" xml:space="preserve">
+    <value>重命名</value>
+  </data>
+  <data name="RenameResultTitle" xml:space="preserve">
+    <value>重命名完成</value>
+  </data>
+  <data name="RenamingMessage" xml:space="preserve">
+    <value>正在重命名…</value>
+  </data>
+  <data name="ReplaceTargetSpecificTextItem.Content" xml:space="preserve">
+    <value>特定文本</value>
+  </data>
+  <data name="ReplaceTargetWholeNameItem.Content" xml:space="preserve">
+    <value>全部</value>
+  </data>
+  <data name="RestartNoticeInfoBar.Message" xml:space="preserve">
+    <value>重新启动应用后将应用新语言。</value>
+  </data>
+  <data name="ResultPartiallyFailedFormat" xml:space="preserve">
+    <value>{0} 个成功，{1} 个失败。请在预览中查看详细信息。</value>
+  </data>
+  <data name="ResultSucceededFormat" xml:space="preserve">
+    <value>已重命名 {0} 个项目。</value>
+  </data>
+  <data name="SaveTriggersButton.Label" xml:space="preserve">
+    <value>保存触发器</value>
+  </data>
+  <data name="ScopeExtensionItem.Content" xml:space="preserve">
+    <value>扩展名</value>
+  </data>
+  <data name="ScopeFileNameItem.Content" xml:space="preserve">
+    <value>文件名</value>
+  </data>
+  <data name="ScopeFullNameItem.Content" xml:space="preserve">
+    <value>文件名和扩展名</value>
+  </data>
+  <data name="SettingsButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="SettingsButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="SettingsTitleBar.Title" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="SettingsWindow.Title" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="SortButton.Label" xml:space="preserve">
+    <value>排序</value>
+  </data>
+  <data name="SortByDateCreatedMenuItem.Text" xml:space="preserve">
+    <value>创建日期</value>
+  </data>
+  <data name="SortByDateModifiedMenuItem.Text" xml:space="preserve">
+    <value>修改日期</value>
+  </data>
+  <data name="SortByExtensionMenuItem.Text" xml:space="preserve">
+    <value>扩展名</value>
+  </data>
+  <data name="SortByNameMenuItem.Text" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="SortBySizeMenuItem.Text" xml:space="preserve">
+    <value>大小</value>
+  </data>
+  <data name="SortDescendingMenuItem.Text" xml:space="preserve">
+    <value>降序</value>
+  </data>
+  <data name="StartNumberNumberBox.Header" xml:space="preserve">
+    <value>起始编号</value>
+  </data>
+  <data name="StepNumberBox.Header" xml:space="preserve">
+    <value>增量</value>
+  </data>
+  <data name="SubstitutionHintTextBlock.Text" xml:space="preserve">
+    <value>可以使用 $1、$2 等插入捕获的组。</value>
+  </data>
+  <data name="ThemeDarkItem.Content" xml:space="preserve">
+    <value>深色</value>
+  </data>
+  <data name="ThemeLightItem.Content" xml:space="preserve">
+    <value>浅色</value>
+  </data>
+  <data name="ThemeSettingsCard.Header" xml:space="preserve">
+    <value>主题</value>
+  </data>
+  <data name="ThemeSystemItem.Content" xml:space="preserve">
+    <value>使用系统设置</value>
+  </data>
+  <data name="TriggerCountFormat" xml:space="preserve">
+    <value>触发器 ({0})</value>
+  </data>
+  <data name="TriggerEditorActionLabel.Text" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="TriggerEditorAddButtonText" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="TriggerEditorAddTitle" xml:space="preserve">
+    <value>添加触发器</value>
+  </data>
+  <data name="TriggerEditorCaseLabel.Text" xml:space="preserve">
+    <value>转换为</value>
+  </data>
+  <data name="TriggerEditorConditionModeLabel.Text" xml:space="preserve">
+    <value>应用时机</value>
+  </data>
+  <data name="TriggerEditorConditionOperatorLabel.Text" xml:space="preserve">
+    <value>条件</value>
+  </data>
+  <data name="TriggerEditorConditionScopeLabel.Text" xml:space="preserve">
+    <value>检查部分</value>
+  </data>
+  <data name="TriggerEditorContentLabel.Text" xml:space="preserve">
+    <value>内容</value>
+  </data>
+  <data name="TriggerEditorDialog.CloseButtonText" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="TriggerEditorEditTitle" xml:space="preserve">
+    <value>编辑触发器</value>
+  </data>
+  <data name="TriggerEditorFindTextLabel.Text" xml:space="preserve">
+    <value>查找内容</value>
+  </data>
+  <data name="TriggerEditorOccurrenceLabel.Text" xml:space="preserve">
+    <value>替换匹配项</value>
+  </data>
+  <data name="TriggerEditorPositionLabel.Text" xml:space="preserve">
+    <value>位置</value>
+  </data>
+  <data name="TriggerEditorSampleLabel.Text" xml:space="preserve">
+    <value>示例</value>
+  </data>
+  <data name="TriggerEditorSaveButtonText" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="TriggerEditorScopeLabel.Text" xml:space="preserve">
+    <value>应用范围</value>
+  </data>
+  <data name="TriggerEditorTargetLabel.Text" xml:space="preserve">
+    <value>替换对象</value>
+  </data>
+  <data name="TriggerEnabledCheckBox.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>使用此触发器</value>
+  </data>
+  <data name="TriggerEnabledCheckBox.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+    <value>使用此触发器</value>
+  </data>
+  <data name="TriggerFileSuggestedName" xml:space="preserve">
+    <value>触发器</value>
+  </data>
+  <data name="TriggerFileTypeLabel" xml:space="preserve">
+    <value>AT Batch Renamer 触发器</value>
+  </data>
+  <data name="TriggerListEmptyTextBlock.Text" xml:space="preserve">
+    <value>添加触发器以决定如何更改名称。触发器按从上到下的顺序应用。</value>
+  </data>
+  <data name="TriggerListView.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>触发器</value>
+  </data>
+  <data name="TriggerLoadFailedFormat" xml:space="preserve">
+    <value>无法加载触发器。
+{0}</value>
+  </data>
+  <data name="TriggerSaveFailedFormat" xml:space="preserve">
+    <value>无法保存触发器。
+{0}</value>
+  </data>
+  <data name="UndoButton.Content" xml:space="preserve">
+    <value>撤销</value>
+  </data>
+  <data name="UndoingMessage" xml:space="preserve">
+    <value>正在撤销…</value>
+  </data>
+  <data name="UndoResultTitle" xml:space="preserve">
+    <value>撤销完成</value>
+  </data>
+  <data name="UseRegularExpressionCheckBox.Content" xml:space="preserve">
+    <value>使用正则表达式</value>
+  </data>
+  <data name="ValidationConditionTextRequired" xml:space="preserve">
+    <value>请输入条件文本。</value>
+  </data>
+  <data name="ValidationFindTextRequired" xml:space="preserve">
+    <value>请输入要查找的内容。</value>
+  </data>
+  <data name="ValidationInsertTextRequired" xml:space="preserve">
+    <value>请输入要添加的文本。</value>
+  </data>
+  <data name="ValidationInvalidRegularExpressionFormat" xml:space="preserve">
+    <value>正则表达式无效：{0}</value>
+  </data>
+  <data name="VersionSettingsCard.Header" xml:space="preserve">
+    <value>版本</value>
+  </data>
+</root>

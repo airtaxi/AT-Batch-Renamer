@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentDialog
+    x:Class="BatchRenamerAT.Dialogs.TriggerEditorDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Uid="TriggerEditorDialog"
+    Title="{x:Bind ViewModel.Title}"
+    DefaultButton="Primary"
+    IsPrimaryButtonEnabled="{x:Bind ViewModel.IsValid, Mode=OneWay}"
+    PrimaryButtonText="{x:Bind ViewModel.PrimaryButtonText}"
+    Style="{ThemeResource DefaultContentDialogStyle}"
+    mc:Ignorable="d">
+
+    <ContentDialog.Resources>
+        <x:Double x:Key="ContentDialogMaxWidth">760</x:Double>
+        <GridLength x:Key="LabelColumnWidth">140</GridLength>
+    </ContentDialog.Resources>
+
+    <StackPanel Width="620" Spacing="12">
+        <Grid ColumnSpacing="12">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="{StaticResource LabelColumnWidth}" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock
+                x:Uid="TriggerEditorActionLabel"
+                Grid.Column="0"
+                VerticalAlignment="Center" />
+            <ComboBox
+                Grid.Column="1"
+                MinWidth="220"
+                SelectedIndex="{x:Bind ViewModel.ActionIndex, Mode=TwoWay}">
+                <ComboBoxItem x:Uid="ActionReplaceItem" />
+                <ComboBoxItem x:Uid="ActionInsertItem" />
+                <ComboBoxItem x:Uid="ActionConvertCaseItem" />
+            </ComboBox>
+        </Grid>
+
+        <Grid ColumnSpacing="12">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="{StaticResource LabelColumnWidth}" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock
+                x:Uid="TriggerEditorScopeLabel"
+                Grid.Column="0"
+                VerticalAlignment="Center" />
+            <ComboBox
+                Grid.Column="1"
+                MinWidth="220"
+                SelectedIndex="{x:Bind ViewModel.ScopeIndex, Mode=TwoWay}">
+                <ComboBoxItem x:Uid="ScopeFileNameItem" />
+                <ComboBoxItem x:Uid="ScopeExtensionItem" />
+                <ComboBoxItem x:Uid="ScopeFullNameItem" />
+            </ComboBox>
+        </Grid>
+
+        <Grid ColumnSpacing="12" Visibility="{x:Bind ViewModel.IsReplaceAction, Mode=OneWay}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="{StaticResource LabelColumnWidth}" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock
+                x:Uid="TriggerEditorTargetLabel"
+                Grid.Column="0"
+                VerticalAlignment="Center" />
+            <ComboBox
+                Grid.Column="1"
+                MinWidth="220"
+                SelectedIndex="{x:Bind ViewModel.ReplaceTargetIndex, Mode=TwoWay}">
+                <ComboBoxItem x:Uid="ReplaceTargetWholeNameItem" />
+                <ComboBoxItem x:Uid="ReplaceTargetSpecificTextItem" />
+            </ComboBox>
+        </Grid>
+
+        <Grid ColumnSpacing="12" Visibility="{x:Bind ViewModel.IsSpecificTextTarget, Mode=OneWay}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="{StaticResource LabelColumnWidth}" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock
+                x:Uid="TriggerEditorFindTextLabel"
+                Grid.Column="0"
+                VerticalAlignment="Center" />
+            <TextBox Grid.Column="1" Text="{x:Bind ViewModel.FindText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+        </Grid>
+
+        <Grid ColumnSpacing="12" Visibility="{x:Bind ViewModel.IsSpecificTextTarget, Mode=OneWay}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="{StaticResource LabelColumnWidth}" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock
+                x:Uid="TriggerEditorOccurrenceLabel"
+                Grid.Column="0"
+                VerticalAlignment="Center" />
+            <StackPanel
+                Grid.Column="1"
+                Orientation="Horizontal"
+                Spacing="16">
+                <ComboBox MinWidth="160" SelectedIndex="{x:Bind ViewModel.OccurrenceIndex, Mode=TwoWay}">
+                    <ComboBoxItem x:Uid="OccurrenceAllItem" />
+                    <ComboBoxItem x:Uid="OccurrenceFirstItem" />
+                    <ComboBoxItem x:Uid="OccurrenceLastItem" />
+                </ComboBox>
+                <CheckBox x:Uid="UseRegularExpressionCheckBox" IsChecked="{x:Bind ViewModel.UseRegularExpression, Mode=TwoWay}" />
+                <CheckBox x:Uid="MatchCaseCheckBox" IsChecked="{x:Bind ViewModel.IsCaseSensitive, Mode=TwoWay}" />
+            </StackPanel>
+        </Grid>
+
+        <Grid ColumnSpacing="12" Visibility="{x:Bind ViewModel.IsInsertAction, Mode=OneWay}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="{StaticResource LabelColumnWidth}" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock
+                x:Uid="TriggerEditorPositionLabel"
+                Grid.Column="0"
+                VerticalAlignment="Center" />
+            <StackPanel
+                Grid.Column="1"
+                Orientation="Horizontal"
+                Spacing="8">
+                <ComboBox MinWidth="220" SelectedIndex="{x:Bind ViewModel.InsertPositionIndex, Mode=TwoWay}">
+                    <ComboBoxItem x:Uid="PositionBeginningItem" />
+                    <ComboBoxItem x:Uid="PositionEndItem" />
+                    <ComboBoxItem x:Uid="PositionAfterCharacterItem" />
+                </ComboBox>
+                <NumberBox
+                    x:Uid="CharacterIndexNumberBox"
+                    MinWidth="120"
+                    Minimum="0"
+                    SpinButtonPlacementMode="Inline"
+                    Visibility="{x:Bind ViewModel.IsAfterCharacterPosition, Mode=OneWay}"
+                    Value="{x:Bind ViewModel.CharacterIndex, Mode=TwoWay}" />
+            </StackPanel>
+        </Grid>
+
+        <Grid ColumnSpacing="12" Visibility="{x:Bind ViewModel.HasContent, Mode=OneWay}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="{StaticResource LabelColumnWidth}" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock
+                x:Uid="TriggerEditorContentLabel"
+                Grid.Column="0"
+                VerticalAlignment="Center" />
+            <ComboBox
+                Grid.Column="1"
+                MinWidth="220"
+                SelectedIndex="{x:Bind ViewModel.ContentKindIndex, Mode=TwoWay}">
+                <ComboBoxItem x:Uid="ContentTextItem" />
+                <ComboBoxItem x:Uid="ContentSequenceNumberItem" />
+            </ComboBox>
+        </Grid>
+
+        <Grid ColumnSpacing="12" Visibility="{x:Bind ViewModel.IsTextContent, Mode=OneWay}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="{StaticResource LabelColumnWidth}" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="1" Spacing="4">
+                <TextBox x:Uid="ContentTextBox" Text="{x:Bind ViewModel.ContentText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBlock
+                    x:Uid="SubstitutionHintTextBlock"
+                    Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                    Style="{StaticResource CaptionTextBlockStyle}"
+                    TextWrapping="Wrap"
+                    Visibility="{x:Bind ViewModel.IsSubstitutionHintVisible, Mode=OneWay}" />
+            </StackPanel>
+        </Grid>
+
+        <Grid ColumnSpacing="12" Visibility="{x:Bind ViewModel.IsSequenceNumberContent, Mode=OneWay}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="{StaticResource LabelColumnWidth}" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel
+                Grid.Column="1"
+                Orientation="Horizontal"
+                Spacing="12">
+                <NumberBox
+                    x:Uid="DigitsNumberBox"
+                    MinWidth="120"
+                    Maximum="12"
+                    Minimum="1"
+                    SpinButtonPlacementMode="Inline"
+                    Value="{x:Bind ViewModel.Digits, Mode=TwoWay}" />
+                <NumberBox
+                    x:Uid="StartNumberNumberBox"
+                    MinWidth="140"
+                    SpinButtonPlacementMode="Inline"
+                    Value="{x:Bind ViewModel.StartNumber, Mode=TwoWay}" />
+                <NumberBox
+                    x:Uid="StepNumberBox"
+                    MinWidth="120"
+                    SpinButtonPlacementMode="Inline"
+                    Value="{x:Bind ViewModel.Step, Mode=TwoWay}" />
+            </StackPanel>
+        </Grid>
+
+        <Grid ColumnSpacing="12" Visibility="{x:Bind ViewModel.IsCaseConversionAction, Mode=OneWay}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="{StaticResource LabelColumnWidth}" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock
+                x:Uid="TriggerEditorCaseLabel"
+                Grid.Column="0"
+                VerticalAlignment="Center" />
+            <ComboBox
+                Grid.Column="1"
+                MinWidth="220"
+                SelectedIndex="{x:Bind ViewModel.CaseConversionIndex, Mode=TwoWay}">
+                <ComboBoxItem x:Uid="CaseUppercaseItem" />
+                <ComboBoxItem x:Uid="CaseLowercaseItem" />
+                <ComboBoxItem x:Uid="CaseTitleCaseItem" />
+                <ComboBoxItem x:Uid="CaseSentenceCaseItem" />
+            </ComboBox>
+        </Grid>
+
+        <Rectangle Height="1" Fill="{ThemeResource DividerStrokeColorDefaultBrush}" />
+
+        <CheckBox x:Uid="ConditionCheckBox" IsChecked="{x:Bind ViewModel.IsConditionEnabled, Mode=TwoWay}" />
+
+        <StackPanel Spacing="12" Visibility="{x:Bind ViewModel.IsConditionEnabled, Mode=OneWay}">
+            <Grid ColumnSpacing="12">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="{StaticResource LabelColumnWidth}" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock
+                    x:Uid="TriggerEditorConditionScopeLabel"
+                    Grid.Column="0"
+                    VerticalAlignment="Center" />
+                <ComboBox
+                    Grid.Column="1"
+                    MinWidth="220"
+                    SelectedIndex="{x:Bind ViewModel.ConditionScopeIndex, Mode=TwoWay}">
+                    <ComboBoxItem x:Uid="ScopeFileNameItem" />
+                    <ComboBoxItem x:Uid="ScopeExtensionItem" />
+                    <ComboBoxItem x:Uid="ScopeFullNameItem" />
+                </ComboBox>
+            </Grid>
+
+            <Grid ColumnSpacing="12">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="{StaticResource LabelColumnWidth}" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock
+                    x:Uid="TriggerEditorConditionOperatorLabel"
+                    Grid.Column="0"
+                    VerticalAlignment="Center" />
+                <ComboBox
+                    Grid.Column="1"
+                    MinWidth="180"
+                    SelectedIndex="{x:Bind ViewModel.ConditionOperatorIndex, Mode=TwoWay}">
+                    <ComboBoxItem x:Uid="ConditionContainsItem" />
+                    <ComboBoxItem x:Uid="ConditionStartsWithItem" />
+                    <ComboBoxItem x:Uid="ConditionEndsWithItem" />
+                    <ComboBoxItem x:Uid="ConditionEqualsItem" />
+                    <ComboBoxItem x:Uid="ConditionRegularExpressionItem" />
+                </ComboBox>
+                <TextBox
+                    x:Uid="ConditionTextBox"
+                    Grid.Column="2"
+                    Text="{x:Bind ViewModel.ConditionText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            </Grid>
+
+            <Grid ColumnSpacing="12">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="{StaticResource LabelColumnWidth}" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock
+                    x:Uid="TriggerEditorConditionModeLabel"
+                    Grid.Column="0"
+                    VerticalAlignment="Center" />
+                <StackPanel
+                    Grid.Column="1"
+                    Orientation="Horizontal"
+                    Spacing="16">
+                    <ComboBox MinWidth="220" SelectedIndex="{x:Bind ViewModel.ConditionModeIndex, Mode=TwoWay}">
+                        <ComboBoxItem x:Uid="ConditionWhenMatchesItem" />
+                        <ComboBoxItem x:Uid="ConditionWhenNotMatchesItem" />
+                    </ComboBox>
+                    <CheckBox x:Uid="MatchCaseCheckBox" IsChecked="{x:Bind ViewModel.IsConditionCaseSensitive, Mode=TwoWay}" />
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+
+        <InfoBar
+            IsClosable="False"
+            IsOpen="{x:Bind ViewModel.HasValidationMessage, Mode=OneWay}"
+            Message="{x:Bind ViewModel.ValidationMessage, Mode=OneWay}"
+            Severity="Error" />
+
+        <Grid ColumnSpacing="12" Visibility="{x:Bind ViewModel.IsValid, Mode=OneWay}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="{StaticResource LabelColumnWidth}" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock
+                x:Uid="TriggerEditorSampleLabel"
+                Grid.Column="0"
+                Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+            <TextBlock
+                Grid.Column="1"
+                IsTextSelectionEnabled="True"
+                Text="{x:Bind ViewModel.SampleText, Mode=OneWay}"
+                TextWrapping="Wrap" />
+        </Grid>
+    </StackPanel>
+</ContentDialog>

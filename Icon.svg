@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Back document (rearmost) -->
+  <rect x="72" y="24" width="136" height="168" rx="14" fill="#C7D3E3" stroke="#8A9BB3" stroke-width="4"/>
+
+  <!-- Back document (middle) -->
+  <rect x="56" y="40" width="136" height="168" rx="14" fill="#DCE4EF" stroke="#8A9BB3" stroke-width="4"/>
+
+  <!-- Front document with folded corner -->
+  <path d="M54 56 H140 L176 92 V210 A14 14 0 0 1 162 224 H54 A14 14 0 0 1 40 210 V70 A14 14 0 0 1 54 56 Z"
+        fill="#FFFFFF" stroke="#8A9BB3" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M140 56 V80 A12 12 0 0 0 152 92 H176 Z"
+        fill="#DCE4EF" stroke="#8A9BB3" stroke-width="4" stroke-linejoin="round"/>
+
+  <!-- Content lines on front document -->
+  <rect x="60" y="112" width="72" height="10" rx="5" fill="#B8C4D6"/>
+  <rect x="60" y="136" width="92" height="10" rx="5" fill="#B8C4D6"/>
+
+  <!-- Rename field -->
+  <rect x="72" y="164" width="164" height="64" rx="14" fill="#0F6CBD"/>
+  <rect x="92" y="190" width="84" height="12" rx="6" fill="#FFFFFF" fill-opacity="0.9"/>
+
+  <!-- Text cursor (I-beam) -->
+  <g stroke="#FFFFFF" stroke-width="6" stroke-linecap="round">
+    <line x1="194" y1="180" x2="194" y2="212"/>
+    <line x1="186" y1="180" x2="202" y2="180"/>
+    <line x1="186" y1="212" x2="202" y2="212"/>
+  </g>
+</svg>

@@ -1,0 +1,5 @@
+root = true
+
+# WinUIEx exposes an obsolete Icon property that the XAML compiler references in generated code.
+[**/XamlTypeInfo.g.cs]
+dotnet_diagnostic.CS0618.severity = none

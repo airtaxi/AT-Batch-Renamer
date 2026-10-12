@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "BatchRenamerAT (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "BatchRenamerAT (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
