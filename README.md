@@ -14,7 +14,7 @@ New names can be checked in a live preview before renaming, and the rename can b
 
 ## Screenshot
 
-<img src=".github/showcase_en.jpg" alt="" width="720">
+<img src=".github/showcase_en.webp" alt="" width="720">
 
 ## Highlights
 
@@ -35,11 +35,11 @@ AT Batch Renamer combines multiple rules into a single trigger list and applies 
 
 ## Trigger actions
 
-| Action | Description |
-|---|---|
-| **Replace** | Replaces the whole name, or specific text within it, with text or a sequence number. Specific text can be matched as plain text or a regular expression, and all matches, only the first, or only the last can be replaced. |
-| **Insert** | Inserts text or a sequence number at the beginning, at the end, or after a given number of characters. |
-| **Change case** | UPPERCASE, lowercase, Capitalize Each Word, or Sentence case. |
+| Action          | Description                                                                                                                                                                                                                 |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Replace**     | Replaces the whole name, or specific text within it, with text or a sequence number. Specific text can be matched as plain text or a regular expression, and all matches, only the first, or only the last can be replaced. |
+| **Insert**      | Inserts text or a sequence number at the beginning, at the end, or after a given number of characters.                                                                                                                      |
+| **Change case** | UPPERCASE, lowercase, Capitalize Each Word, or Sentence case.                                                                                                                                                               |
 
 ## Trigger options
 
