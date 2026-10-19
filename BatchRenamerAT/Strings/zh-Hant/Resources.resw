@@ -356,7 +356,7 @@
     <value>目前名稱</value>
   </data>
   <data name="PreviewResultSummaryFormat" xml:space="preserve">
-    <value>成功 {0} · 失敗 {1}</value>
+    <value>成功 {0}，失敗 {1}</value>
   </data>
   <data name="PreviewStatusAlreadyExists" xml:space="preserve">
     <value>已存在</value>
@@ -395,7 +395,7 @@
     <value>未變更</value>
   </data>
   <data name="PreviewSummaryFormat" xml:space="preserve">
-    <value>變更 {0} · 未變更 {1} · 衝突 {2}</value>
+    <value>變更 {0}，未變更 {1}，衝突 {2}</value>
   </data>
   <data name="PreviewTitleTextBlock.Text" xml:space="preserve">
     <value>預覽</value>

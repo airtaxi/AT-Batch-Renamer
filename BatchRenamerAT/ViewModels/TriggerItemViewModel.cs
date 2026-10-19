@@ -17,6 +17,8 @@ public sealed partial class TriggerItemViewModel : ObservableObject
 
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(Description))]
+    [NotifyPropertyChangedFor(nameof(ConditionDescription))]
+    [NotifyPropertyChangedFor(nameof(HasCondition))]
     public partial RenameTrigger Trigger { get; set; }
 
     [ObservableProperty]
@@ -30,7 +32,11 @@ public sealed partial class TriggerItemViewModel : ObservableObject
 
     public string NumberText => Number.ToString(CultureInfo.CurrentCulture);
 
-    public string Description => _triggerDescriptionService.Describe(Trigger);
+    public string Description => _triggerDescriptionService.DescribeAction(Trigger);
+
+    public string ConditionDescription => _triggerDescriptionService.DescribeCondition(Trigger);
+
+    public bool HasCondition => Trigger.Condition is not null;
 
     public double DescriptionOpacity => IsEnabled ? 1 : 0.5;
 

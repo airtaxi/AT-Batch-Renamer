@@ -356,7 +356,7 @@
     <value>Current name</value>
   </data>
   <data name="PreviewResultSummaryFormat" xml:space="preserve">
-    <value>{0} succeeded · {1} failed</value>
+    <value>{0} succeeded, {1} failed</value>
   </data>
   <data name="PreviewStatusAlreadyExists" xml:space="preserve">
     <value>Already exists</value>
@@ -395,7 +395,7 @@
     <value>Unchanged</value>
   </data>
   <data name="PreviewSummaryFormat" xml:space="preserve">
-    <value>{0} changed · {1} unchanged · {2} conflicts</value>
+    <value>{0} changed, {1} unchanged, {2} conflicts</value>
   </data>
   <data name="PreviewTitleTextBlock.Text" xml:space="preserve">
     <value>Preview</value>

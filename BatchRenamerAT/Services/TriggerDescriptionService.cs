@@ -4,24 +4,23 @@ using System.Globalization;
 
 namespace BatchRenamerAT.Services;
 
-// Builds the one-line, localized summary shown for a trigger in the trigger list.
+// Builds the localized summary shown for a trigger in the trigger list. The action and the
+// condition are described separately so the list can show them on their own lines.
 public sealed class TriggerDescriptionService(LocalizationService localizationService)
 {
-    private const string Separator = " · ";
-
-    public string Describe(RenameTrigger trigger)
+    public string DescribeAction(RenameTrigger trigger)
     {
         var scopeText = DescribeScope(trigger.Scope);
-        var actionDescription = trigger switch
+        return trigger switch
         {
             ReplaceTrigger replaceTrigger => DescribeReplace(replaceTrigger, scopeText),
             InsertTrigger insertTrigger => DescribeInsert(insertTrigger, scopeText),
             CaseConversionTrigger caseConversionTrigger => localizationService.GetFormattedString("DescriptionConvertCaseFormat", scopeText, DescribeCaseConversionMode(caseConversionTrigger.Mode)),
             _ => ""
         };
-
-        return trigger.Condition is { } condition ? actionDescription + Separator + DescribeCondition(condition) : actionDescription;
     }
+
+    public string DescribeCondition(RenameTrigger trigger) => trigger.Condition is { } condition ? DescribeCondition(condition) : "";
 
     private string DescribeReplace(ReplaceTrigger replaceTrigger, string scopeText)
     {

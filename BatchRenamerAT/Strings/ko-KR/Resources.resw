@@ -356,7 +356,7 @@
     <value>현재 이름</value>
   </data>
   <data name="PreviewResultSummaryFormat" xml:space="preserve">
-    <value>성공 {0} · 실패 {1}</value>
+    <value>성공 {0}, 실패 {1}</value>
   </data>
   <data name="PreviewStatusAlreadyExists" xml:space="preserve">
     <value>이미 있음</value>
@@ -395,7 +395,7 @@
     <value>그대로</value>
   </data>
   <data name="PreviewSummaryFormat" xml:space="preserve">
-    <value>바뀜 {0} · 그대로 {1} · 충돌 {2}</value>
+    <value>바뀜 {0}, 그대로 {1}, 충돌 {2}</value>
   </data>
   <data name="PreviewTitleTextBlock.Text" xml:space="preserve">
     <value>미리보기</value>
